@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require "pry"
 
 require './config/environment.rb'
 require './app/models/team.rb'
@@ -23,6 +24,8 @@ class App < Sinatra::Base
       end
       
       @heros = Hero.all
+      
+      binding.pry
       
       erb :team
     end
