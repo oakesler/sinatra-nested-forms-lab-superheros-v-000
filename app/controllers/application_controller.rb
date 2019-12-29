@@ -11,7 +11,7 @@ class App < Sinatra::Base
     
     
     get "/" do 
-      erb :index
+      erb :super_hero
     end
     
     post "/teams" do 
@@ -24,7 +24,7 @@ class App < Sinatra::Base
       
       @heros = Hero.all
       
-      erb :show
+      erb :team
     end
 
 end
