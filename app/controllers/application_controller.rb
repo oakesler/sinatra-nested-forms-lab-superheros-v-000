@@ -5,9 +5,10 @@ require './app/models/team.rb'
 require './app/models/hero.rb'
 
 class App < Sinatra::Base
-  
-    set :views, Proc.new { File.join(root, "views") } 
-    #set :views, Proc.new { File.join(root, "../views/") }
+    
+    
+    set :views, Proc.new { File.join(root, "../views/") }
+    
     
     get "/" do 
       erb :index
