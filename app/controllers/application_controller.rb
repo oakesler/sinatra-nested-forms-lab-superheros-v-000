@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require "pry"
 
 require './config/environment.rb'
 require './app/models/team.rb'
@@ -22,7 +23,8 @@ class App < Sinatra::Base
         Hero.new(details)
       end
       
-      @heros = Hero.all
+      @heroes = Hero.all
+
       
       erb :team
     end
