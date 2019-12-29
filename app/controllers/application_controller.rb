@@ -5,14 +5,15 @@ require './app/models/team.rb'
 require './app/models/hero.rb'
 
 class App < Sinatra::Base
-
-    set :views, Proc.new { File.join(root, "../views/") }
+  
+    set :views, Proc.new { File.join(root, "views") } 
+    #set :views, Proc.new { File.join(root, "../views/") }
     
     get "/" do 
-      erb :new
+      erb :index
     end
     
-    post "/show" do 
+    post "/teams" do 
       @team = Team.new(params[:team])
       
       params[:team][:members].each do |details|
